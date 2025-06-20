@@ -4,8 +4,8 @@ public class Asignatura {
     static ArrayList<Alumno> lista = new ArrayList<>();
 
     public void mostrarAlumnos() {
-        System.out.println("Nombre\tNota1\tNota2\tNota3\tMedia");
-        System.out.println("--------------------------------------");
+        System.out.println(Textos.ENCABEZADO);
+        System.out.println(Textos.SEPARADOR);
         for (int i = 0; i < lista.size(); i++) {
             Alumno a = lista.get(i);
             System.out.println(a.getNombre() + "\t" +

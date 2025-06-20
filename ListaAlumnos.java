@@ -9,8 +9,8 @@ public class ListaAlumnos {
     }
 
     public void mostrarAlumnos() {
-        System.out.println("Nombre\tNota1\tNota2\tNota3\tMedia");
-        System.out.println("--------------------------------------");
+        System.out.println(Textos.ENCABEZADO);
+        System.out.println(Textos.SEPARADOR);
         for (int i = 0; i < alumnos.size(); i++) {
             Alumno a = alumnos.get(i);
             System.out.println(a.getNombre() + "\t" +
@@ -39,10 +39,10 @@ public class ListaAlumnos {
         
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("\tLISTADO DE ALUMNOS");
-        System.out.println("--------------------------------------");
+        System.out.println(Textos.TITULO_LISTA);
+        System.out.println(Textos.SEPARADOR);
         lista.mostrarAlumnos();
-        System.out.println("--------------------------------------");
-        System.out.println("Nota media del grupo: " + lista.promedioGeneral());
+        System.out.println(Textos.SEPARADOR);
+        System.out.println(Textos.NOTA_MEDIA + lista.promedioGeneral());
     }
 }
